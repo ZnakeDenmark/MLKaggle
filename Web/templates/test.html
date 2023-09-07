@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<title>Character Prediction</title>
+<head>
+    <h1> DC/Marvel Character predictor</h1>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Insert following entries to find the character</h2>
+
+    <form action="{{ url_for('predict')}}" method="post">
+        <label >Universe</label>
+        <select name="Universe">
+            <option value="0">DC</option>
+            <option value="1">Marvel</option>
+        </select>
+    
+            <label>Gender</label>
+        <select name="Sex">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+            <label>Identity</label>
+        <select name="Identity">
+            <option value="0">Secret</option>
+            <option value="1">Public</option>
+        </select>
+    
+            <label>Alive</label>
+        <select name="Alive">
+            <option value="0">Yes</option>
+            <option value="1">No</option>
+        </select>
+    
+            <label>Alignment</label>
+        <select name="Alignment">
+            <option value="0">Good</option>
+            <option value="1">Bad</option>
+        </select>
+    
+        <label>Eye color</label>
+        <select name="Eyes">
+            <option value="0">Blue</option>
+            <option value="1">Brown</option>
+            <option value="2">Green</option>
+            <option value="3">Black</option>
+            <option value="4">White</option>
+            <option value="5">Variable</option>
+            <option value="6">Hazel</option>
+            <option value="7">Yellow</option>
+            <option value="8">Red</option>
+            <option value="9">Grey</option>
+            <option value="10">Purple</option>
+            <option value="11">Orange</option>
+            <option value="12">Aubrun</option>
+            <option value="13">Photocellular</option>
+            <option value="14">Silver</option>
+        </select>
+    
+            <label>Hair color</label>
+        <select name="Hair">
+            <option value="0">Black</option>
+            <option value="1">Red</option>
+            <option value="2">White</option>
+            <option value="3">Brown</option>
+            <option value="4">Blond</option>
+            <option value="5">No</option>
+            <option value="6">Bald</option>
+            <option value="7">Green</option>
+            <option value="8">Orange</option>
+            <option value="9">Variable</option>
+            <option value="10">Grey</option>
+            <option value="11">Blue</option>
+            <option value="12">Aubrun</option>
+            <option value="13">Silver</option>
+            <option value="13">Yellow</option>
+    
+        </select>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+    
+    <h1> {{ prediction }} </h1>
+
+
+</body>
+
+</html>

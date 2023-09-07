@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<title>Character Prediction</title>
+<head>
+    <h1> DC/Marvel Character predictor</h1>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h2>Insert following entries to find the character</h2>
+
+    <form action="{{ url_for('predict')}}" method="post">
+        <input type="number" name="Eyes" placeholder="Eye color" required="required"/>
+        <input type="number" name="Hair" placeholder="Hair color" required="required" />
+        <input type="number" name="Identity" placeholder="Identity" required="required" />
+        <input type="number" name="Alignment" placeholder="Alignment" required="required"/>
+        <input type="number" name="Sex" placeholder="Gender" required="required" />
+        <input type="number" name="Alive" placeholder="Alive?" required="required" />
+        <input type="number" name="Universe" placeholder="Universe" required="required" />
+    <button type="submit" class="btn">Submit</button>
+    </form>
+    
+    <h1> {{ prediction }} </h1>
+
+
+</body>
+
+</html>
