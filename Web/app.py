@@ -9,7 +9,7 @@ model = pickle.load(open("./MarvelDCName.pkl", "rb"))
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("test.html")
 
 
 @app.route("/predict", methods=["POST"])
@@ -27,7 +27,7 @@ def predict():
 
 
     return render_template(
-        "index.html", prediction="Name of Character: {}".format(output)
+        "test.html", prediction="Name of Character: {}".format(output)
     )
 
 
