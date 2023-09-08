@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 
-model = pickle.load(open("./MarvelDCName.pkl", "rb"))
+model = pickle.load(open("./Job.pkl", "rb"))
 
 
 @app.route("/")
@@ -23,11 +23,11 @@ def predict():
 
     output = prediction[0]
 
-    names = ["test", "test2", "test3", "test4", "test1", "test5"]
+    Employment = ["No", "Yes"]
 
 
     return render_template(
-        "test.html", prediction="Name of Character: {}".format(output)
+        "test.html", prediction="Employed?: {}".format(Employment[output])
     )
 
 
