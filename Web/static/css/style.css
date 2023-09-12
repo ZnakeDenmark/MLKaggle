@@ -1,6 +1,36 @@
 
-.test {
-    float: left;
-    width: 200px;
-    display: grid;
+
+body {
+
+    background:linear-gradient(to left top, black, cyan);
+    background-attachment: fixed; /
+    text-align: left;
+
+}
+title {
+    color: black;   
+    text-align: center;
+    font-family: comic sans ms;
+}
+
+h1 {
+    color: black;
+    font-size: 25;
+    font-family: comic sans ms;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-family: Comic Sans MS;
+    text-align: center;
+    
+}
+
+form label {
+    color: black;
+    font-family: Comic Sans MS;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
 }
